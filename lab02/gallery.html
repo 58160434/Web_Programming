@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<title>Gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+
+<body class="w3-dark-grey w3-content" style="max-width:1600px">
+
+<nav class="w3-sidenav w3-collapse w3-lime w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-none" title="close menu">
+      <i class="fa fa-remove w3-text-dark-grey w3-hover-text-red"></i>
+    </a>
+    <p class="w3-center"><img src="16.jpg" style="width:150px;height: 150px;" class="w3-circle"></p><br>
+    <h4 class="w3-center w3-padding-0 w3-text-dark-grey"><b>58160434</b></h4>
+    <p class="w3-center w3-text-dark-grey">Sontaya Rungsaard</p>
+    <hr style="height:5px;border-width:0;background-color:#737373"> 
+  </div>
+  <a href="lab02.html" onclick="w3_close()" class="w3-padding w3-hover-dark-grey w3-text-dark-grey"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="http://angsila.cs.buu.ac.th/~58160434/887371/lab01/aboutme.html" onclick="w3_close()" class="w3-padding w3-hover-dark-grey w3-text-dark-grey"><i class="fa fa-vcard w3-margin-right"></i>About Me</a> 
+  <a href="timetable.html" onclick="w3_close()" class="w3-padding w3-hover-dark-grey w3-text-dark-grey"><i class="fa fa-table w3-margin-right"></i>Time Table</a> 
+  <a href="enroll.html" onclick="w3_close()" class="w3-padding w3-hover-dark-grey w3-text-dark-grey"><i class="fa fa-table w3-margin-right"></i>Enroll</a>
+  <a href="gallery.html" onclick="w3_close()" class="w3-padding w3-hover-dark-grey w3-text-dark-grey"><i class="fa fa-photo w3-margin-right"></i>Gallery</a>
+  <div class="w3-container">
+    <hr style="height:5px;border-width:0;background-color:#737373">
+  </div>
+  <div class=" w3-padding-top w3-large">
+    <a href="https://www.google.com" class="w3-hover-none w3-hover-text-green w3-show-inline-block w3-text-dark-grey w3-margin-right"><i class="fa fa-google" style="font-size:24px"></i></a>
+    <a href="https://web.facebook.com" class="w3-hover-none w3-hover-text-indigo w3-show-inline-block w3-text-dark-grey w3-margin-right"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+    <a href="https://twitter.com" class="w3-hover-none w3-hover-text-cyan w3-show-inline-block w3-text-dark-grey w3-margin-right"><i class="fa fa-twitter-square" style="font-size:24px"></i></a>
+    <a href="https://www.amazon.com" class="w3-hover-none w3-hover-text-deep-orange w3-show-inline-block w3-text-dark-grey w3-margin-right"><i class="fa fa-amazon" style="font-size:24px"></i></a>
+    <a href="https://github.com" class="w3-hover-none w3-hover-text-purple w3-show-inline-block w3-text-dark-grey w3-margin-right"><i class="fa fa-github" style="font-size:24px"></i></a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header class="w3-container" id="portfolio">
+    <a href="#"><img src="16.jpg" style="width: 65px;height: 65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-opennav w3-hide-large w3-xxlarge" onclick="w3_open()"><i class="fa fa-bars w3-text-lime w3-hover-text-blue"></i></span>
+    <h1 class="w3-text-lime w3-center"><b>Gallery</b></h1>
+    
+  </header>
+  
+  <!-- First Photo Grid-->
+  <!-- <div class="w3-row-padding">
+    <div class="w3-third w3-responsive w3-container w3-margin-bottom" style="width:100%">
+      <div class="w3-container w3-responsive w3-white">
+        <br>
+            <table class="TTtable">
+  <tr class="TRtable">
+    <th class="THtable">Day/Time</th>
+    <th>8:00-9:00</th>
+    <th>9:00-10:00</th>
+    <th>10:00-11:00</th>
+    <th>11:00-12:00</th>
+    <th>12:00-13:00</th>
+    <th>13:00-14:00</th>
+    <th>14:00-15:00</th>
+    <th>15:00-16:00</th>
+    <th>16:00-17:00</th>
+    <th>17:00-18:00</th>
+    <th>18:00-19:00</th>
+    <th>19:00-20:00</th>
+    <th>20:00-21:00</th>
+  </tr>
+  <tr>
+    <td class="CMONtable">Monday</td>
+    <td class="TDCOtable" colspan="3">228202-54<br>(3) 3, KB-406
+KB</td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDCOtable" colspan="3">228102-54<br>(3) 5, KB-401
+KB</td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+  </tr>
+  <tr>
+    <td class="CTUEtable">Tuesday</td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDCOtable" colspan="3">887230-54<br>(3) 3, COMP-108
+COMP</td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+  </tr>
+  <tr>
+    <td class="CWEDtable">Wednesday</td>
+    <td class="TDCOtable" colspan="2"> 887371-54<br>(3) 3, M-IT ทางไกลชั้น5
+M</td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDCOtable" colspan="2">887371-54<br>(3) 3, SD-413
+SD</td>
+  </tr>
+  <tr>
+    <td class="CTHUtable">Thursday</td>
+    <td class="TDCOtable" colspan="2">886210-54<br>(3) 5, SD-512
+SD</td>
+    <td class="TDCOtable" colspan="2">886210-54<br>(3) 5, SD-512
+SD</td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+  </tr>
+  <tr>
+    <td class="CFRItable">Friday</td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+  </tr>
+  <tr>
+    <td class="CSATtable">Saturday</td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDCOtable" colspan="2">887260-54<br>(3) 3, SD-513
+SD</td>
+    <td class="TDtable"></td>
+    <td class="TDCOtable" colspan="2">887260-54<br>(3) 3, SD-513
+SD</td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+    <td class="TDtable"></td>
+  </tr>
+</table>
+        <i class="fa fa-asterisk"> ข้อมูลที่ปรากฎอยู่ในตารางเรียนประกอบด้วย รหัสวิชา (จำนวนหน่วยกิต) กลุ่ม, ห้องเรียนและอาคาร ตามลำดับ</i>
+        <br><br>
+      </div>
+    </div>   
+  </div> -->
+  
+  <!-- <div class="w3-black w3-center w3-padding-24">Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div> -->
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
