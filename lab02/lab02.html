@@ -1,90 +1,180 @@
-<!DOCTYPE html>
-<html>
-<title>Lab02</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,p,i {
-  font-family: 'Trirong', serif;
-}
-</style>
-
-<body class="w3-light-grey w3-content" style="max-width:1600px">
-
-<nav class="w3-sidenav w3-collapse w3-blue-grey w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-none" title="close menu">
-      <i class="fa fa-remove w3-hover-text-red"></i>
-    </a>
-    <p class="w3-center"><img src="16.jpg" style="width:150px;height: 150px;" class="w3-circle"></p>
-    <h3 class="w3-center w3-padding-0"><b>58160434</b></h3>
-    <h4 class="w3-center">Sontaya Rungsaard</h4>
-    <hr class="style-hr"> 
-  </div>
-  <a href="lab02.html" onclick="w3_close()" class="w3-padding w3-hover-grey "><i class="fa fa-home w3-margin-right"></i>Home</a> 
-  <a href="http://angsila.cs.buu.ac.th/~58160434/887371/lab01/aboutme.html" onclick="w3_close()" class="w3-padding w3-hover-grey "><i class="fa fa-vcard w3-margin-right"></i>About Me</a> 
-  <a href="timetable.html" onclick="w3_close()" class="w3-padding w3-hover-grey"><i class="fa fa-table w3-margin-right"></i>Time Table</a> 
-  <a href="enroll.html" onclick="w3_close()" class="w3-padding w3-hover-grey"><i class="fa fa-table w3-margin-right"></i>Enroll</a>
-  <a href="gallery.html" onclick="w3_close()" class="w3-padding w3-hover-grey"><i class="fa fa-photo w3-margin-right"></i>Gallery</a>
-  <div class="w3-container">
-    <hr class="style-hr">
-  </div>
-  <div class=" w3-padding-top w3-large">
-    <a href="https://www.google.com" class="w3-hover-none w3-hover-text-green w3-show-inline-block w3-margin-right"><i class="fa fa-google" style="font-size:24px"></i></a>
-    <a href="https://web.facebook.com" class="w3-hover-none w3-hover-text-indigo w3-show-inline-block w3-margin-right"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
-    <a href="https://twitter.com" class="w3-hover-none w3-hover-text-cyan w3-show-inline-block w3-margin-right"><i class="fa fa-twitter-square" style="font-size:24px"></i></a>
-    <a href="https://www.amazon.com" class="w3-hover-none w3-hover-text-deep-orange w3-show-inline-block w3-margin-right"><i class="fa fa-amazon" style="font-size:24px"></i></a>
-    <a href="https://github.com" class="w3-hover-none w3-hover-text-purple w3-show-inline-block w3-margin-right"><i class="fa fa-github" style="font-size:24px"></i></a>
-  </div>
-</nav>
-
-<!-- Overlay effect when opening sidenav on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
-
-  <!-- Header -->
-  <header class="w3-container" id="portfolio">
-    <img src="16.jpg" style="width: 65px;height: 65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity">
-    <span class="w3-opennav w3-hide-large w3-xxlarge" onclick="w3_open()"><i class="fa fa-bars w3-hover-text-blue"></i></span>
-    <h1 class="w3-text-blue-grey w3-center"><b>Home</b></h1>
-    
-  </header>
-  
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-responsive w3-container w3-margin-bottom" style="width:100%">
-      <div class="w3-container w3-responsive w3-white">
-        <br>
-        <p class="PP1">WELCOME</p>
-        <p class="PP2">TO</p>
-        <p class="PP3">LAB02 [ CSS ]</p>
-        <br>
-      </div>
-    </div>   
-  </div>
-  
-  <!-- <div class="w3-black w3-center w3-padding-24">Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div> -->
-<!-- End page content -->
-</div>
-
-<script>
-// Script to open and close sidenav
-function w3_open() {
-    document.getElementById("mySidenav").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidenav").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script>
-
-</body>
-</html>
+<!DOCTYPE html> 
+
+<html>
+
+<title>Lab02</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+html,body,h1,h2,h3,h4,h5,p,i {
+
+  font-family: 'Trirong', serif;
+
+}
+
+</style>
+
+
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+
+
+<nav class="w3-sidenav w3-collapse w3-blue-grey w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+
+  <div class="w3-container">
+
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-none" title="close menu">
+
+      <i class="fa fa-remove w3-hover-text-red"></i>
+
+    </a>
+
+    <p class="w3-center"><img src="16.jpg" style="width:150px;height: 150px;" class="w3-circle"></p>
+
+    <h3 class="w3-center w3-padding-0"><b>58160434</b></h3>
+
+    <h4 class="w3-center">Sontaya Rungsaard</h4>
+
+    <hr class="style-hr"> 
+
+  </div>
+
+  <a href="lab02.html" onclick="w3_close()" class="w3-padding w3-hover-grey "><i class="fa fa-home w3-margin-right"></i>Home</a> 
+
+  <a href="http://angsila.cs.buu.ac.th/~58160434/887371/lab01/aboutme.html" onclick="w3_close()" class="w3-padding w3-hover-grey "><i class="fa fa-vcard w3-margin-right"></i>About Me</a> 
+
+  <a href="timetable.html" onclick="w3_close()" class="w3-padding w3-hover-grey"><i class="fa fa-table w3-margin-right"></i>Time Table</a> 
+
+  <a href="enroll.html" onclick="w3_close()" class="w3-padding w3-hover-grey"><i class="fa fa-table w3-margin-right"></i>Enroll</a>
+
+  <a href="gallery.html" onclick="w3_close()" class="w3-padding w3-hover-grey"><i class="fa fa-photo w3-margin-right"></i>Gallery</a>
+
+  <div class="w3-container">
+
+    <hr class="style-hr">
+
+  </div>
+
+  <div class=" w3-padding-top w3-large">
+
+    <a href="https://www.google.com" class="w3-hover-none w3-hover-text-green w3-show-inline-block w3-margin-right"><i class="fa fa-google" style="font-size:24px"></i></a>
+
+    <a href="https://web.facebook.com" class="w3-hover-none w3-hover-text-indigo w3-show-inline-block w3-margin-right"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+
+    <a href="https://twitter.com" class="w3-hover-none w3-hover-text-cyan w3-show-inline-block w3-margin-right"><i class="fa fa-twitter-square" style="font-size:24px"></i></a>
+
+    <a href="https://www.amazon.com" class="w3-hover-none w3-hover-text-deep-orange w3-show-inline-block w3-margin-right"><i class="fa fa-amazon" style="font-size:24px"></i></a>
+
+    <a href="https://github.com" class="w3-hover-none w3-hover-text-purple w3-show-inline-block w3-margin-right"><i class="fa fa-github" style="font-size:24px"></i></a>
+
+  </div>
+
+</nav>
+
+
+
+<!-- Overlay effect when opening sidenav on small screens -->
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+<!-- !PAGE CONTENT! -->
+
+<div class="w3-main" style="margin-left:300px">
+
+
+
+  <!-- Header -->
+
+  <header class="w3-container" id="portfolio">
+
+    <img src="16.jpg" style="width: 65px;height: 65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity">
+
+    <span class="w3-opennav w3-hide-large w3-xxlarge" onclick="w3_open()"><i class="fa fa-bars w3-hover-text-blue"></i></span>
+
+    <h1 class="w3-text-blue-grey w3-center"><b>Home</b></h1>
+
+    
+
+  </header>
+
+  
+
+  <!-- First Photo Grid-->
+
+  <div class="w3-row-padding">
+
+    <div class="w3-third w3-responsive w3-container w3-margin-bottom" style="width:100%">
+
+      <div class="w3-container w3-responsive w3-white">
+
+        <br>
+
+        <p class="PP1">WELCOME</p>
+
+        <p class="PP2">TO</p>
+
+        <p class="PP3">LAB02 [ CSS ]</p>
+
+        <br>
+
+      </div>
+
+    </div>   
+
+  </div>
+
+  
+
+  <!-- <div class="w3-black w3-center w3-padding-24">Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div> -->
+
+<!-- End page content -->
+
+</div>
+
+
+
+<script>
+
+// Script to open and close sidenav
+
+function w3_open() {
+
+    document.getElementById("mySidenav").style.display = "block";
+
+    document.getElementById("myOverlay").style.display = "block";
+
+}
+
+ 
+
+function w3_close() {
+
+    document.getElementById("mySidenav").style.display = "none";
+
+    document.getElementById("myOverlay").style.display = "none";
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
+
