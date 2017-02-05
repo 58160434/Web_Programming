@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Trirong');
+
+hr.style-hr {
+    border: 0;
+    height: 5px;
+    background: white;
+}
+p.PP1 {
+    color: #B1FE92;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+p.PP2 {
+    color: #42D6CF;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+p.PP3 {
+    color: #C0B6DA;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.CenP {
+    text-align: center;
+}
+.TTtable { 
+    border: 1px solid #999999;
+    border-collapse: collapse;
+    width: 100%;
+}
+.TRtable {
+    background-color: #607d8b;
+    
+}
+.THtable {
+    border: 1px solid #999999;
+    color: white;
+    font-size: 16px;
+}
+.THeroll {
+    border: 1px solid #999999;
+    color: white;
+    font-size: 24px;
+    color: white;
+}
+.TDtable {
+    padding: 5px;
+    border: 1px solid #999999;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+.TDCOtable {
+    padding: 5px;
+    border: 1px solid #999999;
+    text-align: center;
+    background-color: #ccffff;
+    color: black;
+}
+.CMONtable {
+    padding: 5px;
+    border: 1px solid #999999;
+    text-align: center;
+    background-color: #ffff00;
+}
+.CTUEtable {
+    padding: 5px;
+    border: 1px solid #999999;
+    text-align: center;
+    background-color: #ff66cc;
+}
+.CWEDtable {
+    padding: 5px;
+    border: 1px solid #999999;
+    text-align: center;
+    background-color: #33cc33;
+}
+.CTHUtable {
+    padding: 5px;
+    border: 1px solid #999999;
+    text-align: center;
+    background-color: #ff9933;
+}
+.CFRItable {
+    padding: 5px;
+    border: 1px solid #999999;
+    text-align: center;
+    background-color: #3399ff;
+}
+.CSATtable {
+    padding: 5px;
+    border: 1px solid #999999;
+    text-align: center;
+    background-color: #cc00ff;
+}
+
