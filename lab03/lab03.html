@@ -1,122 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Lab03</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>@import url('https://fonts.googleapis.com/css?family=Sriracha');</style>
-  <style>
-    /*Set body*/
+    <title>Lab03</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <style>
     body {
-      font-family: 'Barrio', cursive;
+        font-family: 'Kanit', sans-serif;
+        font-size: 16px;
+    }
+    .img1 {
+        margin: auto auto;
+        display: block;
+    }
+    hr.style-hr {
+        border: 0;
+        height: 5px;
+        background: white;
     }
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
-
-    /* Set gray background color and 100% height */
     .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
+      background-color: #3F3F3F;
+      height: 100%
     }
-
+    .row.content {
+        height: 1500px
+    }
+    /* Set gray background color and 100% height */
+    
+    .colorh4 {
+        color: white;
+    } 
+    .sidenav li a {
+        color: #fff !important;
+    }
+    
+    li a:hover:not(.active) {
+        background-color: #6C6C6C;
+    }
+    
+    li.active a {
+        color: #FFFFFF !important;
+        background-color: #2CE28A !important;
+    }
     /* Set black background color, white text and some padding */
+    
     footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
+        background-color: #555;
+        color: white;
+        padding: 10px;
     }
-
     /* On small screens, set height to 'auto' for sidenav and grid */
+    
     @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;}
+        .sidenav {
+            height: auto;
+            padding: 15px;
+        }
+        .row.content {
+            height: auto;
+        }
     }
-  </style>
+    </style>
 </head>
+
 <body>
-
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav ">
-      <h4>Sontaya'Blog</h4>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#section1">Grid System</a></li>
-        <li><a href="#section2">Form</a></li>
-        <li><a href="#section3">Family</a></li>
-        <li><a href="#section3">Photos</a></li>
-      </ul><br>
-    </div>
-
-    <div class="col-sm-9">
-      <h4><small>RECENT POSTS</small></h4>
-      <hr>
-      <h2>I Love Food</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
-      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><br>
-
-      <h4><small>RECENT POSTS</small></h4>
-      <hr>
-      <h2>Officially Blogging</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-
-      <h4>Leave a Comment:</h4>
-      <form role="form">
-        <div class="form-group">
-          <textarea class="form-control" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Submit</button>
-      </form>
-      <br><br>
-
-      <p><span class="badge">2</span> Comments:</p><br>
-
-      <div class="row">
-        <div class="col-sm-2 text-center">
-          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
-          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <br>
-        </div>
-        <div class="col-sm-2 text-center">
-          <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-        </div>
-        <div class="col-sm-10">
-          <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
-          <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <br>
-          <p><span class="badge">1</span> Comment:</p><br>
-          <div class="row">
-            <div class="col-sm-2 text-center">
-              <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+            <br>
+                <img class="img1 img-circle img-responsive" src="images/me.jpg" style="width: 100px;height: 100px;"><br>
+                <h4 class="text-center colorh4"> Sontaya Rungsaard's Blog</h4>
+                <hr class="style-hr nav-pills">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="lab03.html">หน้าแรก</a></li>
+                    <li ><a href="grid.html">การใช้งาน Grid ใน Bootstrap</a></li>
+                    <li><a href="form.html">การใช้งาน Form</a></li>
+                </ul>
+                <br>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Blog..">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
             </div>
-            <div class="col-xs-10">
-              <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
-              <p>Me too! WOW!</p>
-              <br>
+            <div class="col-sm-9 container-fluid">
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>การใช้งาน Grid ใน Bootstrap <span class="label label-primary">New</span></h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Sontaya Rungsaard, Feb 7, 2017.</h5>
+                <h5><span class="label label-success">Grid</span></h5><br>
+                
+                <p>Bootstrap นั้นรองรับการแสดงผลทั้งบนคอมพิวเตอร์ มือถือและแท็บแล็ต โดยการแสดงผลดังกล่าว Bootstrap นั้นใช้ Grid System  เข้ามาจัดการการแสดงผลเนื้อหาให้มีความเหมาะสมกับขนาดหน้าจอของอุปกรณ์ต่างๆ เหล่านั้น...</p>
+                <br>
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>การใช้งาน Form <span class="label label-primary">New</span></h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Sontaya Rungsaard, Feb 7, 2017.</h5>
+                <h5><span class="label label-success">Form</span></h5><br>
+                <p>การใช้ CSS เพื่อกำหนดรูปแบบต่างๆ ให้กับคอนโทรลต่างๆ ของฟอร์มในเอกสารนั้น Bootstrap มีคลาสที่หลากหลายที่จะช่วยให้เราสามารถปรับปต่างคอนโทรลต่างๆ ของฟอร์มให้ดูสวยงาม และน่าใช้งานมากยิ่งขึ้น โดยเราสามารถใช้คลาสต่างๆ ได้กับแท็ก <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> และ <code>&lt;select&gt;</code> โดยเราต้องทำการเพิ่มคลาส <code>.form-control</code> ให้กับคอนโทรลเหล่านั้น โดยความกว้างของคอนโทรลนั้นจะกว้าง 100% เป็นค่าเริ่มต้น แต่เราสามารถกำหนดค่าความกว้างให้เป็นตามที่เราต้องการได้ โดยการใช้สไตล์ซีท <code>style="width: XXXpx;"</code>  และใช้งานร่วมกับ Grid ได้โดยความกว้างจะได้ขนาดเท่ากับขนาดของ Grid...</p>
+                <br>
+                <hr>
+                <h4>Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+                <br>
+                <br>
+                <p><span class="badge">2</span> Comments:</p>
+                <br>
+                <div class="row">
+                    <div class="col-sm-2 text-center">
+                        <img src="images/friend1.png" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>58160179 <small>Feb 8, 2017, 9:12 PM</small></h4>
+                        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <img src="images/friend2.png" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>58160270 <small>Sep 10, 2017, 8:25 PM</small></h4>
+                        <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <br>
+                        <p><span class="badge">1</span> Comment:</p>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-2 text-center">
+                                <img src="images/friend3.png" class="img-circle" height="65" width="65" alt="Avatar">
+                            </div>
+                            <div class="col-xs-10">
+                                <h4>58160385 <small>Feb 11, 2017, 8:28 PM</small></h4>
+                                <p>Me too! WOW!</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
-
+    <footer class="container-fluid">
+        <p>Footer Text</p>
+    </footer>
 </body>
+
 </html>
