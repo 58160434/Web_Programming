@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <script language="JavaScript">
+        function ajaxFunction() {
+            var ajaxRequest;
+            var txt, x, xx, i;
+            ajaxRequest = new XMLHttpRequest();
+            ajaxRequest.onreadystatechange = function() {
+                if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200)
+                    txt = "<table border='2' align='center'><tr><th>Title</th><th>Publisher</th><th>Author</th><th>Cover</th><th>Blurb</th></tr>";
+                x = ajaxRequest.responseXML.documentElement.getElementsByTagName("book");
+                for (i = 0; i < x.length; i++) {
+                    txt = txt + "<tr>";
+                    xx = x[i].getElementsByTagName("title"); {
+                        try {
+                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        } catch (er) {
+                            txt = txt + "<td> </td>";
+                        }
+                    }
+                    xx = x[i].getElementsByTagName("publisher"); {
+                        try {
+                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        } catch (er) {
+                            txt = txt + "<td> </td>";
+                        }
+                    }
+                    xx = x[i].getElementsByTagName("author"); {
+                        try {
+                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        } catch (er) {
+                            txt = txt + "<td> </td>";
+                        }
+                    }
+                    xx = x[i].getElementsByTagName("cover"); {
+                        try {
+                            txt = txt + "<td><img src=" + xx[0].getAttribute('src') + " width=180 height=180></td>";
+                        } catch (er) {
+                            txt = txt + "<td> </td>";
+                        }
+                    }
+                    xx = x[i].getElementsByTagName("blurb"); {
+                        try {
+                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        } catch (er) {
+                            txt = txt + "<td> </td>";
+                        }
+                    }
+                    txt = txt + "</tr>";
+                }
+                txt = txt + "</table>"
+                document.getElementById('disp').innerHTML = txt;
+            }
+            ajaxRequest.open("GET", "http://angsila.cs.buu.ac.th/~wittawas/592/887371/labs/get_xml.php", true);
+            ajaxRequest.send();
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <div id="disp">
+            <h2>Let AJAX change this text</h2></div>
+    </center>
+    <br>
+    <center><button type="button" onclick="ajaxFunction()">change content</button></center>
+</body>
+
+</html>

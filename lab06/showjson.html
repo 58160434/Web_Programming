@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+function loadjson(){
+	var xmlhttp;
+	xmlhttp = new XMLHttpRequest;
+	xmlhttp.onreadystatechange = function(){
+		if (xmlhttp.readyState == 4 &&  xmlhttp.status == 200){
+			var html = "";
+			var obj = JSON.parse(xmlhttp.responseText);
+			//alert(obj.books.length);
+			html += "<table border='2' align='center'><tr><th>Title</th><th>Publisher</th><th>Author</th><th>Cover</th><th>Blurb</th></tr>";
+			for (i = 0; i < obj.books.length; i++){
+				html += "<tr><td>" + obj.books[i].book.title + "</td>";
+				html += "<td>" + obj.books[i].book.publisher + "</td>";
+				html += "<td>" + obj.books[i].book.author + "</td>";
+				html += "<td><img src='" + obj.books[i].book.cover + "'width=180 height=180></td>";
+				html += "<td>" + obj.books[i].book.blurb + "</td>";
+			}
+			html += "</tr></table>";
+			document.getElementById("mydiv").innerHTML = html;
+		}
+	}
+	xmlhttp.open("GET", "http://angsila.cs.buu.ac.th/~wittawas/592/887371/labs/get_json.php", true);
+	xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<center><div id="mydiv"><h2>Let AJAX change this text</h2></div></center>
+<br>
+<center><button type="button" onclick="loadjson()">change content</button></center>
+</body>
+</html>
