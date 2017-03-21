@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Toturial</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- set style -->
+    <style>
+    h1,h2,h3,h4,h5{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        color: black;
+        font-size: 18px;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    
+    table,
+    tr,
+    th,
+    td {
+        border-collapse: collapse;
+        border: 3px solid #919191;
+        text-align: center;
+        align-items: center;
+        font-size: 16px;
+    }
+    
+    td.tdTEXT {
+        text-align: left;
+    }
+    
+    td.tdIMG {
+        background-color: white;
+    }
+    
+    h2.H2center {
+        text-align: center;
+    }
+    
+    footer {
+        background-color: #34B574;
+        color: white#FFFFFF;
+        padding: 5px;
+        text-align: center;
+        bottom: 0;
+        width: 100%
+    }
+    </style>
+</head>
+
+<body id="myHome">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <!-- <li class="active"><a href="#myHome">Home <span class="sr-only">(current)</span></a></li> -->
+                    <li><a href="#DataBase">DataBase</a></li>
+                    <li><a href="#db">db.php</a></li>
+                    <li><a href="#uc">UserClass.php</a></li>
+                    <li><a href="#mc">MsgClass.php</a></li>
+                    <li><a href="#ub">userbox.php</a></li>
+                    <li><a href="#cb">chatbox.php</a></li>
+                    <li><a href="#index">index.php</a></li>
+                    <li><a href="#chatpage">chatpage.php</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="DataBase" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>สร้างตาราง database<h2>
+                <br>
+                <div class="table-responsive">
+                <h4>1) สร้างตาราง msgchat</h4>
+                <img src="img/database1.PNG">
+                <br>
+                <h4>2) สร้างตาราง userchat</h4>
+                <img src="img/database2.PNG"> 
+                <p>โดยสร้างตารางตามรูปข้างบน และกำหมดค่าต่างๆ แล้วค่อยสร้างไฟล์ db.php เพื่อเชื่อมต่อฐานข้อมูล</p>
+                <br>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div id="db" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2> db.php </h2>
+                <br>
+                <img src="img/db.PNG"> 
+                <p>ขั้นตอนในการสร้างไฟล์db โดยมีฟังก์ชัน connect() เชื่อมต่อฐานข้อมูล , query() ใช้ประมวลผลคำสั่งsqlไปยังฐานข้อมูลที่เลือกไว้, close() ปิดการเชื่อมต่อ</p>
+                <br>
+                <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="uc" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2> UserClass.php </h2>
+                <br>
+                <img src="img/userclass.PNG"> 
+                <p>ประกาศตัวแปร userchat_id เป็นprivate ส่วน userchat_name,userchat_email  เป็นpublic<br>
+                   สร้างฟังก์ชัน insert ที่ไว้เก็บข้อมูล user ที่มา login โดยเก็บ ชื่อ และ อีเมล์<br>
+                   สร้างฟังก์ชัน delete เพื่อเอาไว้เรียกใช้ตอน logout และทำการลบลำดับของ userตอนกด logout<br></p>
+                <br>
+                <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mc" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2> MsgClass.php </h2>
+                <br>
+                <img src="img/msg.PNG"> 
+                <p>ประกาศตัวแปร msgchat_id เป็นprivate ส่วน msgchat_name,msgchat_msg,msgchat_date  เป็นpublic<br>
+                   สร้างฟังก์ชัน insert ที่ไว้เก็บข้อมูล msg ที่มา login โดยเก็บ ชื่อของคนที่ส่งข้อความที่แชท ข้อความแชทและ เวลาที่ส่งข้อความแชท<br>
+                   สร้างฟังก์ชัน delete เพื่อลบลำดับข้อความที่แชท<br></p>
+                <br>
+                <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ub" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2> userbox.php </h2>
+                <br>
+                <img src="img/userbox.PNG"> 
+                <p>เรียกใช้ไฟล์ db.php และ ไฟล์ UserClass.php<br>
+                   สร้าง object user เชื่อมต่อกับ user ที่ login เข้ามา<br>
+                   แสดงหน้าตากล่องของ user online ตกแต่งได้ตามใจชอบ<br>
+                   คืนค่าข้อมูลของuserในแถวที่ชี้อยู่ และเก็บไว้ที่ array และเลื่อนไปตัวชี้ชี้ไปยังตำแหน่งถ้ดไป โดยแสดงเป็นชื่อของผู้ที่เข้ามาแชท<br></p> <h3>หน้า userbox ที่ได้</h3><br>
+                   <img src="img/useronline1.jpg" > 
+                <br>
+                <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cb" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2> chatbox.php </h2>
+                <br>
+                <img src="img/chatbox.PNG">
+                <p>เรียกใช้ไฟล์ db.php และ ไฟล์ MsgClass.php<br>
+                    สร้าง object msg เชื่อมต่อกับ msg ให้ sql เท่ากับ ค่าทั้งหมดในตาราง msgchat ก็คือ msgchat_id msgchat_name msgchat_msg msgchat_date <br>
+                   คืนค่าข้อมูลของ msg ในแถวที่ชี้อยู่ และเก็บไว้ที่ array และเลื่อนไปตัวชี้ชี้ไปยังตำแหน่งถ้ดไป โดยแสดงเป็นชื่อคนแชท ต่อด้วย ข้อความที่แชท และ เวลาที่แชท ตกแต่งได้ตามใจชอบ<br></p> <h3>หน้า chatbox ที่ได้</h3><br>
+                   <img src="img/useronline2.jpg" > <br><br>
+                <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="index" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2> index.php </h2>
+                <br>
+                <img src="img/index.PNG"> 
+                <p>เรียกใช้ไฟล์ db.php และ ไฟล์ UserClass.php<br>
+                   มีการเชื่อมต่อกับ user เมื่อ logout ก็จะลบลำดับของ user<br>
+                   ตั้งแต่บรรทัดที่10 เป็นหน้าตาของlogin มีการใช้css ในหน้า chatpage.php ใส่ชื่อและอีเมลล์ แล้วกดปุ่ม Login<br></p> <h3>หน้า index ที่ได้</h3><br>               
+                 <img src="img/login.PNG" > <br><br>
+                <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chatpage" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2> chatpage.php </h2>
+                <br>
+                <img src="img/chatpage1.PNG"> 
+                <p> เรียกไฟล์ UserChat.php & MsgChat.php ประกาศเปิดใช้session_start()<br>
+                   9-11 : ตรวจสอบ$_POST ['enter'] และให้ $_SESSION ['name'] เท่ากับแปลง$_POST ['name']อยู่ในรูปแบบString<br>
+                   12-17: ตรวจสอบ$_POST['enter'] ประกาศ new user() ทำการ connect ให้userchat_name = $_POST['name'] และ userchatemail = $_POST['email'] ตรวจสอบ name & email แล้วทำการinsert user<br>
+                   19-24 : ประกาศ new user ใหม่และconnect ให้sql=เลือกทั้งหมดของuserchatมีเงื่อนไขว่าuserchat_nameเลือกดู$_POST['name']เอาไว้เช็คตอนuser logoutออก ประกาศrows=Fetch ข้อมูลจากฐานข้อมูลมาเก็บไว้ใน List ของ Array</p>
+                <br>
+                <img src="img/chatpage2.PNG"> 
+                <p> 25-31 : ตรวจสอบ$_POST ['send'] ประกาศ new msg()ทำการ connect ให้ msgchat_msg = $_POST['msg'] msgchat_name = $_POST['user'] และ msgchat_date = $_POST['datetime'] ตรวจสอบ msg user และ datetime แล้วทำการinsert msg ไป<br>
+                   33-38 : ประกาศ new msg ใหม่และconnect ให้sql=เลือกทั้งหมดของmsgchatมีเงื่อนไขว่าuserchat_name เลือกดู$_POST['user']เอาไว้เช็คตอนuser logoutออก ประกาศrows=Fetch ข้อมูลจากฐานข้อมูลมาเก็บไว้ใน List ของ Array</p>
+                <br>
+                <img src="img/chatpage3.PNG"> 
+                <p> 51  : แสดง welcome: "ชื่อผู้ใช่ล็อกอิน" โดย $_SESSION['name']<br>
+                    52-56 : ให้actionไปที่index.php ในรูแบบPOST สร้างปุ่มรูปแบบhiddenชื่อuseridให้value=$rows['userchat_id']เพื่อใช้ระบุตอนlogoutและdelete($_POST['userid'])ในหน้าindex.php แล้วสร้างปุ่มlogout</p>
+                <br>
+                <img src="img/chatpage4.PNG"> 
+                <p> 62-67  : actionไปที่chatpage.php ในรูแบบPOST สร้างปุ่มรูปแบบhiddenชื่อ user ให้value=$_SESSION['name'], สร้างปุ่มรูปแบบhiddenชื่อ datetime ให้value=date("Y-m-d H:i:s") และ สร้างปุ่มรูปแบบtextชื่อ msg โดยจำกัดตัวอักษรให้พิมพ์มากสุด 100 ตัวอักษร แล้วสร้างปุ่มส่งข้อความ ชื่อ send</p>
+                <br>
+                <img src="img/chatpage5.PNG"> 
+                <p> 70-82  : สร้างฟังก์ชัน loadchat() โดยประกาศตัวแปร xmlhttp1 ให้xmlhttp1สร้างอ๊อบเจค XMLHttpRequest(IE7+, Firefox, Chrome, Safari และ Opera) ตรวจสอบสถานะการทำงานของการ request จากนั้นคืนค่าสถานะการทำงานปัจจุบันของการ requestและคืนค่าสถานะการทำงานว่าการ request และกำหนด getElementById ชื่อ showChat และresponse มาจาก server แบบข้อความ ส่วน
+                getElementById ชื่อ box.scrollTop=document.getElementById('box').scrollHeight คือกำหนด scrollbar อยู่ข้งล่าง และ ติดต่อกับ web server รุปแบบPOST, ไฟล์chatbox.php, true แล้วส่งไปยัง page ปลายทางที่ติดต่อไว้ และ กำหนดระยะเวลาการทำงานแบบต่อเนื่องตลอด โดย setInterval(loadchat,2000) ส่งทุกๆ2วิ<br>
+                84-95 : ทำเหมือนกับ 70-82 สร้างฟังก์ชัน loadser() และติดต่อไฟล์ userbox.php ในรูปแบบ POST โดย setInterval(loaduser,2000) ส่งทุกๆ2วิ</p>
+                <br>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <footer>
+        <p>จัดทำโดย</p>
+        <p>58160270 นางสาว อุษา เทียมเทศ | 58160434 นาย สนธยา รุ่งสอาด</p>
+    </footer>
+</body>
+
+</html>
+
