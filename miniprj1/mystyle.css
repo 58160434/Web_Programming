@@ -26,26 +26,11 @@ a:hover {
 #wrapper {
     margin: 0 auto;
     padding-bottom: 25px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#48FF44));
+    background: -webkit-gradient(linear, left top, left bottom, from(#F7F2B7), to(#1E9BC4));
     width: 700px;
-    border: 3px solid #09A701;
+    border: 3px solid #ADADAD;
 }
-#loginform {
-    margin: 0 auto;
-    padding-bottom: 25px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#48FF44));
-    width: 320px;
-    border: 3px solid #09A701;
-}
-#loginform {
-    padding-top: 18px;
-}
- 
-#loginform p {
-    margin: 5px;
-}
- 
-#chatbox {
+#box {
     display: inline-block;
     text-align: left;
     margin: 0 auto;
@@ -78,7 +63,9 @@ a:hover {
 .welcome {
     float: left;
 }
- 
+.online {
+    float: right;
+}
 .logout {
     float: right;
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>todo</title>
+<script type="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function() {
+	$("#btn_submit").click(function(event){
+		$.ajax({
+			url: "add_new_todo.php",
+			type: "POST",
+			data: "topic="+$("#todo").val(),
+			success: function(data){
+				$("#disp").html(data);
+			},
+			error: function(data){
+				$("#disp").html("<h3>Error!</h3?>");
+			}
+		});
+	});
+
+	$("#todo").click(function(event){
+		$(this).select();
+	});
+});
+</script>
+</head>
+<body>
+<p>Todo:
+<input type="text" id="todo">
+<button id="btn_submit">Save</button></p>
+<div id="disp"></div>
+</p>
+</body>
+</html>
