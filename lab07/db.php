@@ -6,6 +6,6 @@ $user = "it58160434";
 $passwd = "0896959711";
 $dbname = "it58160434";
 $conn = new mysqli($host, $user, $passwd, $dbname);
-$con->query('SET NAMES UTF8');
+$conn->query('SET NAMES UTF8');
 if ($conn_error) die($conn->connect_error);
 ?>
