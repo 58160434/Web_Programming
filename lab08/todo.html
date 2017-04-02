@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>todo</title>
-<script type="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 $(document).ready(function() {
 	$("#btn_submit").click(function(event){
@@ -19,7 +19,17 @@ $(document).ready(function() {
 			}
 		});
 	});
-
+	$.ajax({
+		url: "add_new_todo.php",
+		type: "POST",
+		data: "topic="+$("#todo").val(),
+		success: function(data){
+			$("#disp").html(data);
+		},
+		error: function(data){
+			$("#disp").html("<h3>Error!</h3?>");
+		}
+	});
 	$("#todo").click(function(event){
 		$(this).select();
 	});
