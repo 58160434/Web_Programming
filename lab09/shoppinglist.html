@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="ShoppingList" ng-controller="ListContriller">
+        <h1>Shopping List</h1>
+        <ul>
+            <li ng-repeat="stuff in shoppingList">{{stuff.listItem}}</li>
+        </ul>
+        <form ng-submit="addItem()">
+            <input type="text" placeholder="item to add" ng-model="data.itemToAdd">
+            <input type="submit" value="add">
+        </form>
+        <script>
+            var app = angular.module("ShoppingList", []);
+            app.controller("ListContriller", function($scope) {
+                $scope.shoppingList = new Array();
+                $scope.addItem = function() {
+                    $scope.shoppingList.push({
+                        listItem: $scope.data.itemToAdd,
+                        completed: false
+                    });
+                    $scope.data.itemToAdd = '';
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
