@@ -50,7 +50,6 @@ include("db.php");
         event.preventDefault();
       }
   });
-
   // $(document).on("pagecreate","#pageAdd",function(){
   //     $("#pageAdd").on("swiperight",function(){
   //       window.location='index.php';
